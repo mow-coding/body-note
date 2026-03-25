@@ -1,5 +1,5 @@
 [Initial Created: 2026-03-25]
-[Last Modified: 2026-03-25 14:10]
+[Last Modified: 2026-03-25 14:17]
 
 # Body Note Implementation Log
 
@@ -33,6 +33,7 @@
 - Docker Desktop 4.65.0 설치를 완료했습니다.
 - Docker Linux 엔진과 WSL 2 정상 동작을 확인했습니다.
 - 로컬 Supabase 개발 환경을 `npm run supabase:start`로 기동했습니다.
+- Vercel `Preview` 환경 변수 2개를 프로젝트 API로 추가 완료했습니다.
 
 ## 검증 기록
 
@@ -52,8 +53,8 @@
 - 현재 프론트엔드 골격과 인프라 보안 기본선은 준비된 상태입니다.
 - 다음 단계에서는 실제 Supabase 프로젝트 연결, 인증 플로우, 데이터 모델링을 차례대로 붙이면 됩니다.
 - 로컬 Supabase 개발 환경은 이제 사용 가능한 상태입니다.
-- 다음 인프라 보완 포인트는 Vercel Preview 환경 변수입니다.
+- 인프라 보완 항목은 일단 모두 닫힌 상태입니다.
 
 ## Next Review Session
 
-현재 시스템은 앱 빌드, GitHub 공개 저장소, Supabase 링크, Vercel Production 배포, Docker Desktop, 로컬 Supabase 개발 환경까지 준비되어 있으며, 다음에는 Vercel Preview 환경 변수 점검만 이어서 진행하면 됩니다.
+현재 시스템은 앱 빌드, GitHub 공개 저장소, Supabase 링크, Vercel Production 배포, Docker Desktop, 로컬 Supabase 개발 환경, Vercel Preview 환경 변수까지 준비되어 있으며, 다음에는 바로 기능 개발을 진행하면 됩니다.

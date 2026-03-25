@@ -1,5 +1,5 @@
 [Initial Created: 2026-03-25]
-[Last Modified: 2026-03-25 14:10]
+[Last Modified: 2026-03-25 14:17]
 
 # Body Note Infrastructure Guide
 
@@ -220,9 +220,8 @@ Vercel CLI 운영 방식
 
 주의
 
-- Vercel의 `Production`과 `Development` 환경 변수는 설정 완료했습니다.
-- `Preview` 환경 변수는 Vercel CLI가 브랜치 선택을 추가로 요구해 두 값이 아직 비어 있습니다.
-- 현재 앱은 이 값이 즉시 필요하지 않아 배포는 성공했지만, 추후 PR 미리보기 배포에서 Supabase 값을 직접 사용하기 시작하면 Vercel 대시보드에서 같은 두 값을 `Preview`에도 추가하는 것이 안전합니다.
+- Vercel의 `Production`, `Development`, `Preview` 환경 변수는 모두 설정 완료했습니다.
+- 브라우저에서 사용하는 값만 `VITE_` 접두어를 유지합니다.
 
 ## 팀 온보딩 체크리스트
 
@@ -242,4 +241,4 @@ Vercel CLI 운영 방식
 
 ## Next Review Session
 
-현재 시스템은 GitHub, Supabase, Vercel 연결과 Production 배포, 로컬 Supabase 개발 환경까지 완료된 상태이며, 다음 리뷰에서는 Vercel Preview 환경 변수만 보완하면 됩니다.
+현재 시스템은 GitHub, Supabase, Vercel 연결과 Production 배포, 로컬 Supabase 개발 환경, Vercel Preview 환경 변수까지 완료된 상태이며, 다음 리뷰에서는 바로 기능 개발로 이어가면 됩니다.
