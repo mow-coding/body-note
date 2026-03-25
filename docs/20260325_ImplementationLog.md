@@ -1,5 +1,5 @@
 [Initial Created: 2026-03-25]
-[Last Modified: 2026-03-25 13:55]
+[Last Modified: 2026-03-25 14:10]
 
 # Body Note Implementation Log
 
@@ -31,6 +31,8 @@
 - Vercel `Blue` 팀 아래 `body-note` 프로젝트를 만들고 GitHub 저장소를 연결했습니다.
 - Vercel Production 배포를 성공시켜 `https://body-note.vercel.app`를 확보했습니다.
 - Docker Desktop 4.65.0 설치를 완료했습니다.
+- Docker Linux 엔진과 WSL 2 정상 동작을 확인했습니다.
+- 로컬 Supabase 개발 환경을 `npm run supabase:start`로 기동했습니다.
 
 ## 검증 기록
 
@@ -38,17 +40,20 @@
 - `npm run lint` 통과
 - `npx supabase --version` 확인 완료
 - `npm audit --omit=dev` 결과 `0 vulnerabilities`
-- `docker` CLI는 Docker Desktop 설치 후 전용 경로에서 확인되지만, Linux 엔진은 아직 재부팅 전이라 준비되지 않았습니다.
+- `docker` CLI와 Docker Linux 엔진 모두 정상 동작을 확인했습니다.
 - `vercel deploy --prod --yes` 성공
 - Docker Desktop 앱 설치와 실행 프로세스 확인 완료
 - Windows `RebootPending` 상태 확인 완료
+- Docker Linux 엔진 확인 완료
+- `npx supabase status` 성공
 
 ## 피드백 루프
 
 - 현재 프론트엔드 골격과 인프라 보안 기본선은 준비된 상태입니다.
 - 다음 단계에서는 실제 Supabase 프로젝트 연결, 인증 플로우, 데이터 모델링을 차례대로 붙이면 됩니다.
-- 로컬 Supabase DB 검증은 Windows 재부팅 직후 가장 먼저 다시 확인해야 합니다.
+- 로컬 Supabase 개발 환경은 이제 사용 가능한 상태입니다.
+- 다음 인프라 보완 포인트는 Vercel Preview 환경 변수입니다.
 
 ## Next Review Session
 
-현재 시스템은 앱 빌드, GitHub 공개 저장소, Supabase 링크, Vercel Production 배포, Docker Desktop 설치까지 준비되어 있으며, 다음에는 Windows 재부팅 후 Docker 엔진 확인과 Preview 환경 변수 점검을 이어서 진행하면 됩니다.
+현재 시스템은 앱 빌드, GitHub 공개 저장소, Supabase 링크, Vercel Production 배포, Docker Desktop, 로컬 Supabase 개발 환경까지 준비되어 있으며, 다음에는 Vercel Preview 환경 변수 점검만 이어서 진행하면 됩니다.

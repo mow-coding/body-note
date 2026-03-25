@@ -1,5 +1,5 @@
 [Initial Created: 2026-03-25]
-[Last Modified: 2026-03-25 13:54]
+[Last Modified: 2026-03-25 14:10]
 
 # Body Note Infrastructure Guide
 
@@ -147,7 +147,7 @@ npm run supabase:stop
 
 ## Docker 관련 주의사항
 
-현재 이 개발 머신에는 Docker Desktop 앱 설치까지는 완료했습니다. 다만 Windows의 WSL/가상화 기능 반영을 위해 재부팅 대기 상태가 남아 있어, 로컬 Supabase DB까지는 아직 실행하지 못했습니다.
+현재 이 개발 머신에서는 Docker Desktop, WSL 2, Docker Linux 엔진까지 정상 동작합니다.
 
 즉, 지금 완료된 범위는 아래와 같습니다.
 
@@ -156,13 +156,13 @@ npm run supabase:stop
 - `supabase/config.toml` 생성 완료
 - Vite 기본 포트 `5173`에 맞춘 auth redirect URL 보정 완료
 - Docker Desktop 설치 완료
-- Windows 재부팅 대기 상태 확인 완료
+- Docker Linux 엔진 기동 확인 완료
+- `npm run supabase:start` 성공
 
 로컬 DB 실행 전 필수 조건
 
-- Windows 재부팅
-- Docker Desktop 재실행
-- Docker Linux 엔진 정상 기동 확인
+- Docker Desktop 실행 상태 확인
+- `npm run supabase:start`
 
 ## Supabase 클라이언트 초기 설정
 
@@ -205,7 +205,9 @@ Vercel CLI 운영 방식
 - `npm audit --omit=dev` 결과 `0 vulnerabilities`
 - Docker Desktop 앱 설치 완료
 - Docker CLI 바이너리 확인 완료
-- Docker Desktop Linux 엔진은 아직 준비되지 않았고, Windows 재부팅 후 다시 확인이 필요합니다.
+- Docker Desktop Linux 엔진 확인 완료
+- `npm run supabase:start` 성공
+- `npx supabase status` 성공
 
 ## 연결 완료 상태
 
@@ -214,6 +216,7 @@ Vercel CLI 운영 방식
 - Supabase `BodyNote` 프로젝트 ref `stgtezhzaopensronbag` 링크 완료
 - Vercel `Blue` 팀 아래 `body-note` 프로젝트 생성 및 로컬 링크 완료
 - Production 배포 완료: `https://body-note.vercel.app`
+- 로컬 Supabase 개발 환경 기동 완료
 
 주의
 
@@ -239,4 +242,4 @@ Vercel CLI 운영 방식
 
 ## Next Review Session
 
-현재 시스템은 GitHub, Supabase, Vercel 연결과 Production 배포, Docker Desktop 설치까지 완료된 상태이며, 다음 리뷰에서는 Windows 재부팅 후 Docker 엔진과 로컬 Supabase DB, Vercel Preview 환경 변수만 이어서 점검하면 됩니다.
+현재 시스템은 GitHub, Supabase, Vercel 연결과 Production 배포, 로컬 Supabase 개발 환경까지 완료된 상태이며, 다음 리뷰에서는 Vercel Preview 환경 변수만 보완하면 됩니다.
