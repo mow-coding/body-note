@@ -1,0 +1,12 @@
+node_modules/
+dist/
+coverage/
+.vite/
+*.tsbuildinfo
+.env*
+!.env.example
+.vercel/
+supabase/.temp/
+*.dump
+*.sql.gz
+*.bak

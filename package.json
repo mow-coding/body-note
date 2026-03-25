@@ -1,0 +1,23 @@
+{
+  "name": "body-note",
+  "private": true,
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace apps/web",
+    "build": "npm run build --workspace apps/web",
+    "lint": "npm run lint --workspace apps/web",
+    "supabase:init": "supabase init",
+    "supabase:start": "supabase start",
+    "supabase:stop": "supabase stop",
+    "supabase:status": "supabase status",
+    "supabase:login": "supabase login",
+    "supabase:db:reset": "supabase db reset",
+    "vercel:dev": "npx vercel dev",
+    "vercel:link": "npx vercel link --repo"
+  },
+  "devDependencies": {
+    "supabase": "^2.84.0"
+  }
+}

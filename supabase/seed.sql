@@ -1,0 +1,2 @@
+-- Seed data for local Supabase development lives here.
+-- Keep real user data out of this file.
