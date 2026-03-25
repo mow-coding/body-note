@@ -1,5 +1,5 @@
 [Initial Created: 2026-03-25]
-[Last Modified: 2026-03-25 11:02]
+[Last Modified: 2026-03-25 12:17]
 
 # Body Note Implementation Log
 
@@ -26,6 +26,10 @@
 - `supabase/config.toml`에서 로컬 auth redirect URL을 `5173` 기준으로 맞췄습니다.
 - Vercel CLI는 저장소 의존성으로 고정하지 않고 `npx vercel` 방식으로 운용하기로 결정했습니다.
 - `docs/20260325_Infrastructure.md`에 설치 명령어, 팀 온보딩 절차, 보안 원칙을 정리했습니다.
+- GitHub 공개 저장소 `mow-coding/body-note`를 생성하고 첫 푸시를 완료했습니다.
+- Supabase CLI를 `BodyNote` 프로젝트에 링크했습니다.
+- Vercel `Blue` 팀 아래 `body-note` 프로젝트를 만들고 GitHub 저장소를 연결했습니다.
+- Vercel Production 배포를 성공시켜 `https://body-note.vercel.app`를 확보했습니다.
 
 ## 검증 기록
 
@@ -34,6 +38,7 @@
 - `npx supabase --version` 확인 완료
 - `npm audit --omit=dev` 결과 `0 vulnerabilities`
 - `docker --version`은 실패했고, 이 머신에는 Docker Desktop이 아직 없습니다.
+- `vercel deploy --prod --yes` 성공
 
 ## 피드백 루프
 
@@ -43,4 +48,4 @@
 
 ## Next Review Session
 
-현재 시스템은 앱 빌드와 린트, Supabase CLI, 환경 변수 템플릿, Vercel 배포 설정까지 준비되어 있으며, Docker Desktop만 설치되면 로컬 DB까지 이어서 검증할 수 있습니다.
+현재 시스템은 앱 빌드, GitHub 공개 저장소, Supabase 링크, Vercel Production 배포까지 준비되어 있으며, 다음에는 Docker Desktop 설치와 Preview 환경 변수 점검을 이어서 진행하면 됩니다.

@@ -1,5 +1,5 @@
 [Initial Created: 2026-03-25]
-[Last Modified: 2026-03-25 11:02]
+[Last Modified: 2026-03-25 12:17]
 
 # Body Note Infrastructure Guide
 
@@ -202,6 +202,20 @@ Vercel CLI 운영 방식
 - `npm audit --omit=dev` 결과 `0 vulnerabilities`
 - `docker --version`은 실패했고, 따라서 `npm run supabase:start`는 Docker 설치 전까지 보류입니다.
 
+## 연결 완료 상태
+
+- GitHub 공개 저장소 `mow-coding/body-note` 생성 및 `main` 푸시 완료
+- Supabase CLI 로그인 완료
+- Supabase `BodyNote` 프로젝트 ref `stgtezhzaopensronbag` 링크 완료
+- Vercel `Blue` 팀 아래 `body-note` 프로젝트 생성 및 로컬 링크 완료
+- Production 배포 완료: `https://body-note.vercel.app`
+
+주의
+
+- Vercel의 `Production`과 `Development` 환경 변수는 설정 완료했습니다.
+- `Preview` 환경 변수는 Vercel CLI가 브랜치 선택을 추가로 요구해 두 값이 아직 비어 있습니다.
+- 현재 앱은 이 값이 즉시 필요하지 않아 배포는 성공했지만, 추후 PR 미리보기 배포에서 Supabase 값을 직접 사용하기 시작하면 Vercel 대시보드에서 같은 두 값을 `Preview`에도 추가하는 것이 안전합니다.
+
 ## 팀 온보딩 체크리스트
 
 1. 저장소 clone
@@ -220,4 +234,4 @@ Vercel CLI 운영 방식
 
 ## Next Review Session
 
-현재 시스템은 Supabase CLI, Vercel 설정, 환경 변수 템플릿까지 준비된 상태이며, Docker Desktop만 설치되면 `npm run supabase:start`까지 즉시 검증할 수 있습니다.
+현재 시스템은 GitHub, Supabase, Vercel 연결과 Production 배포까지 완료된 상태이며, 다음 리뷰에서는 Docker Desktop 설치 후 로컬 Supabase DB와 Preview 환경 변수만 이어서 점검하면 됩니다.
